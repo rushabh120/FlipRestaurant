@@ -6,6 +6,7 @@ public class RestaurantOrderingAlgorithmFactory {
         if(algorithmKey.equalsIgnoreCase("AVERAGE")) {
             return new OrderByAverageRating();
         }
+        // TODO : Add more algorithms as per ordering requirement 
         return null;
     }
 }

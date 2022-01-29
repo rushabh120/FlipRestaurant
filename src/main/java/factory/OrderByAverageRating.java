@@ -25,14 +25,7 @@ public class OrderByAverageRating implements RestaurantOrderingAlgorithm {
             Restaurant restaurant = restaurantPriorityQueue.poll();
             double avgRating = (restaurant.getTotalRating() * 1.0) / restaurant.getTotalRaters();
             System.out.println(restaurant.getRestaurantName() + " Average Rating = " + avgRating );
-            for(Review review : restaurant.getRestaurantReviewList()) {
-                for(String dishes : review.getDishes()) {
-                    System.out.println(dishes);
-                }
-                for(String dishes : review.getComments()) {
-                    System.out.println(dishes);
-                }
-            }
+            // TODO : Add toString methods to models, print detailed list
         }
     }
 }
